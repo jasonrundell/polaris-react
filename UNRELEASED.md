@@ -23,7 +23,7 @@ Use [the changelog guidelines](https://git.io/polaris-changelog-guidelines) to f
 - Removed reference to `window.Polaris`, which in some cases could be undefined ([#1104](https://github.com/Shopify/polaris-react/issues/1104))
 - Added padding and margin to `subdued` sections for proper spacing between the header and footer ([#1082](https://github.com/Shopify/polaris-react/pull/1082))
 - Removed left margin from vertical `Stack` to prevent overflow ([#1024](https://github.com/Shopify/polaris-react/pull/1024))
-- Ensured server side rendering matches client side rendering for embedded app components (ex. `<Page>`)
+- Ensured server side rendering matches client side rendering for embedded app components (ex. `<Page>`) ([#976](https://github.com/Shopify/polaris-react/pull/976))
 
 ### Documentation
 
