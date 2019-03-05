@@ -263,7 +263,6 @@ export default class ComboBox extends React.PureComponent<Props, State> {
         aria-haspopup
         onFocus={this.handleFocus}
         onBlur={this.handleBlur}
-        tabIndex={0}
       >
         <KeypressListener
           keyCode={Key.DownArrow}

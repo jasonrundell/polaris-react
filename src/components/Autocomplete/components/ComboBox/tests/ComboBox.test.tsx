@@ -495,6 +495,27 @@ describe('<ComboBox/>', () => {
         await expect(comboBox.state('popoverActive')).toBe(false);
       };
     });
+
+    it('focuses the textField when Tab key is pressed', () => {
+      const mockTextOnFocus = jest.fn();
+      const textField = (
+        <TextField label="" onFocus={mockTextOnFocus} onChange={noop} />
+      );
+      mountWithAppProvider(
+        <ComboBox
+          options={options}
+          selected={[]}
+          textField={textField}
+          onSelect={noop}
+        />,
+      );
+
+      async () => {
+        expect(mockTextOnFocus).not.toBeCalled();
+        await listenerMap.keyup({keyCode: Key.Tab});
+        expect(mockTextOnFocus).toBeCalledTimes(1);
+      };
+    });
   });
 
   describe('empty state', () => {
